@@ -15,7 +15,7 @@ ______________________________________________________________________
 
 # iplGPT
 
-With iplGPT, you can ask questions about the Indian Premier League (IPL).
+With iplGPT, you can ask questions about the Indian Premier League (IPL). From searching stas, scores, standings, bios, and more, iplGPT is a one-stop search solution for all things IPL. iplGPT takes a leap forward by transforming sports statistics into meangful, storytelling prose.
 
 ## Running the app
 
@@ -40,8 +40,6 @@ Run the app.
 streamlit run app.py
 ```
 
-```
-
 ## What is iplGPT?
 
 \[TODO\]
@@ -49,4 +47,6 @@ streamlit run app.py
 ## Structure
 
 \[TODO\]
+
+```
 ```
