@@ -4,3 +4,4 @@ pandas
 fastapi
 streamlit
 openai
+uvicorn==0.20.0
