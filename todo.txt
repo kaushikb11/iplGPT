@@ -1,0 +1,33 @@
+
+### TODO 15/03/2023
+
+1. Getting started
+2. OnBoarding
+3. Starting the App on your machine
+4. How to use the app
+5. Structure of the project
+6. Scripts to download the data
+
+
+### Database Design 15/03/2023 - 17/03/2023
+
+1. Tables
+2. Limitations
+3. Pros/ Cons of using the Table
+
+
+### LLM Agent 16/03/2023
+
+1. SQL Agent
+2. How does it work?
+3. How would the iteration work?
+4. How would the evaluation work?
+
+
+### Evaluation 18/03/2023
+1. Questions
+2. Factual correctness
+3. Consistency
+
+### Results to Visualization - 16/03/2023
+1. LLM Agent

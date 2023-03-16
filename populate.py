@@ -50,5 +50,5 @@ def create_matches(csv_file: str) -> None:
 if __name__ == "__main__":
     create_db_and_tables()
 
-    matches_csv_file = "ipl_gpt/data/matches.csv"
+    matches_csv_file = "./data/matches.csv"
     create_matches(matches_csv_file)
