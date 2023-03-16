@@ -2,3 +2,5 @@ sqlmodel
 langchain
 pandas
 fastapi
+streamlit
+openai
