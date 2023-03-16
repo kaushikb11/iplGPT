@@ -1,1 +1,4 @@
 sqlmodel
+langchain
+pandas
+fastapi
