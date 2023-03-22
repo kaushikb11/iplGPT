@@ -17,3 +17,8 @@ for question in QUESTIONS:
         print(f"Question : {question}")
         print(f"Answer : {response}")
         print(cb.data, cb.outputs)
+        # print(type(cb.data))
+        import ast
+
+        data = ast.literal_eval(cb.data)
+        print(len(data))

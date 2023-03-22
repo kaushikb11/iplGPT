@@ -10,7 +10,7 @@ class Matches(SQLModel, table=True):
     id: int = Field(primary_key=True)
     city: str
     date: str  # change it to datetime
-    season: int
+    season: str
     match_number: str
     team1: str
     team2: str

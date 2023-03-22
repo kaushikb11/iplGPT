@@ -1,0 +1,30 @@
+{
+  "type": "package",
+  "handle": "test-private-search",
+  "version": "0.0.2",
+  "description": null,
+  "author": "Kaushik B",
+  "entrypoint": "Unused",
+  "public": false,
+  "plugin": null,
+  "build_config": {
+    "ignore": ["tests", "examples"]
+  },
+  "configTemplate": {},
+  "steamshipRegistry": {
+    "tagline": "Example using Steamship to Deploy LangChain",
+    "tagline2": null,
+    "usefulFor": null,
+    "videoUrl": null,
+    "githubUrl": null,
+    "demoUrl": null,
+    "blogUrl": null,
+    "jupyterUrl": null,
+    "authorGithub": "",
+    "authorName": "Kaushik B",
+    "authorEmail": null,
+    "authorTwitter": null,
+    "authorUrl": null,
+    "tags": ["Prompt API", "LangChain", "Self Ask With Search"]
+  }
+}

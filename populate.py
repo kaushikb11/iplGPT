@@ -25,7 +25,7 @@ def create_matches(csv_file: str) -> None:
                 id=match.ID,
                 city=match.City,
                 date=str(match.Date),
-                season=int(match.Season),
+                season=str(match.Season),
                 match_number=match.MatchNumber,
                 team1=match.Team1,
                 team2=match.Team2,

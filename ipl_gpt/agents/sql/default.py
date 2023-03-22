@@ -7,7 +7,7 @@ from langchain.llms.openai import OpenAI
 from langchain.sql_database import SQLDatabase
 
 # TODO: Remove it later
-os.environ["OPENAI_API_KEY"] = "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"
+os.environ["OPENAI_API_KEY"] = "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"
 
 
 def default_sql_agent(sqlite_url: str) -> AgentExecutor:
