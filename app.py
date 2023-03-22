@@ -18,11 +18,11 @@ st.set_page_config(
 
 @st.cache_resource
 def get_sql_agent():
-    if not os.path.exists("ipl.sqlite"):
+    if not os.path.exists("ipldatabase/database.sqlite"):
         raise FileNotFoundError(
-            "ipl.sqlite not found. Use the `populate` script to create it."
+            "ipldatabase/database.sqlite not found. Use the `download_ipl_sql_data` script to download it."
         )
-    return default_sql_agent("sqlite:///ipl.sqlite")
+    return default_sql_agent("sqlite:///ipldatabase/database.sqlite")
 
 
 @st.cache_data(max_entries=200, persist=True, show_spinner=False)

@@ -132,3 +132,7 @@ dmypy.json
 # DB files
 *.db
 *.sqlite
+
+# Repo specific
+kaggle.json
+*.DS_Store
