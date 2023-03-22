@@ -12,6 +12,21 @@ st.set_page_config(
     menu_items={"Get help": "mailto:kaushikbokka@gmail.com"},
 )
 
+
+@st.cache_data(max_entries=200, persist=True, show_spinner=False)
+def send_query_to_agent(query_text: str):
+    params = {
+        "search_query": st.session_state.query,
+    }
+    response = requests.post(
+        "https://kaushikb11--ipl-gpt-fastapi-app.modal.run/search",
+        params=params,
+        headers=headers,
+    )
+    response = response.json()
+    return response["result"], response["data"]
+
+
 st.title("IPL GPT 🏏")
 
 headers = {
@@ -43,18 +58,7 @@ for question in QUESTIONS:
 
 if len(st.session_state.query) > 0:
     with st.spinner(text="In progress..."):
-        params = {
-            "search_query": st.session_state.query,
-        }
-        response = requests.post(
-            "https://kaushikb11--ipl-gpt-fastapi-app.modal.run/search",
-            params=params,
-            headers=headers,
-        )
-        # response, data = send_query_to_agent(agent, st.session_state.query)
-        response = response.json()
-        result = response["result"]
-        data = response["data"]
+        result, data = send_query_to_agent(st.session_state.query)
 
         st.markdown(result)
         data = ast.literal_eval(data)
