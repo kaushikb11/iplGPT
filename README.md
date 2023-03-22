@@ -30,10 +30,16 @@ source venv/bin/activate
 pip install -e .
 ```
 
-Populate the database with the data.
+<!-- Populate the database with the data.
 
 ```bash
 python3 populate.py
+``` -->
+
+Download the sql data from kaggle
+
+```
+python3 download_ipl_sql_data.py
 ```
 
 Run the app.
