@@ -61,7 +61,7 @@ if len(st.session_state.query) > 0:
         response = send_query_to_agent(st.session_state.query)
 
         st.markdown(response["answer"])
-        if response["tool_used"] == "Statistical Question Answering":
+        if response["tool_used"] == "query_sql_db":
             data = ast.literal_eval(response["data"])
             if len(data) > 1:
                 values = [value[1] for value in data]
