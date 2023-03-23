@@ -24,7 +24,7 @@ def send_query_to_agent(query_text: str):
         headers=headers,
     )
     response = response.json()
-    return response["result"], response["data"]
+    return response
 
 
 st.title("IPL GPT 🏏")
@@ -58,16 +58,17 @@ for question in QUESTIONS:
 
 if len(st.session_state.query) > 0:
     with st.spinner(text="In progress..."):
-        result, data = send_query_to_agent(st.session_state.query)
+        response = send_query_to_agent(st.session_state.query)
 
-        st.markdown(result)
-        data = ast.literal_eval(data)
-        if len(data) > 1:
-            values = [value[1] for value in data]
-            indexes = [index[0] for index in data]
-            data = pd.DataFrame(values, index=indexes, columns=["Count"])
-            # data.reset_index(drop=True, inplace=True)
+        st.markdown(response["answer"])
+        if response["tool_used"] == "Statistical Question Answering":
+            data = ast.literal_eval(response["data"])
             if len(data) > 1:
-                df, chart = st.columns(2)
-                df.dataframe(data, use_container_width=True)
-                chart.bar_chart(data)
+                values = [value[1] for value in data]
+                indexes = [index[0] for index in data]
+                data = pd.DataFrame(values, index=indexes, columns=["Count"])
+                # data.reset_index(drop=True, inplace=True)
+                if len(data) > 1:
+                    df, chart = st.columns(2)
+                    df.dataframe(data, use_container_width=True)
+                    chart.bar_chart(data)
