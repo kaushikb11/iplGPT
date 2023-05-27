@@ -47,11 +47,3 @@ Run the app.
 ```bash
 streamlit run app.py
 ```
-
-## What is iplGPT?
-
-\[TODO\]
-
-## Structure
-
-\[TODO\]
